@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+  background: url(image/img.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  position: relative;
+  width: 600px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover {
+  transform: scale(1.2);
+  background-color: rgba(225, 225, 225, 0.2);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: #2a91ff91;
+}
+
+.card .content {
+  align-items: center;
+  position: relative;
+  display: flex;
+  margin-top: -80px;
+  gap: 20px;
+}
+
+.card .content .imgbox {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.card .content .imgbox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .content .detail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: rgb(0, 0, 0);
+}
+.card .content .detail div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card .content .detail h3 {
+  font-weight: bold;
+  color: beige;
+  text-transform: uppercase;
+}
+.card .content .detail div {
+  font-size: 1.4rem;
+  color: aliceblue;
+}
